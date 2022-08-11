@@ -1,25 +1,6 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 
-// position variables
-let top = "10em"
-let bottom = "10em";
-let left = "10em";
-let right = "10em";
-
-export default function Character() {
-
-   useEffect(() => {
-      document.addEventListener('keydown', handleKeyDown, true)
-   }, [])
-   
-   const handleKeyDown = (e) => {
-      if (e.key === "w") {
-         let newValue = Number(bottom.replace(/\D/g, "")) + 1;
-         bottom = newValue + "em";
-
-         console.log("bottom", bottom)
-      }
-   }
+export default function Character(props) {
 
    let style = {
       character: {
@@ -27,14 +8,15 @@ export default function Character() {
          height:"50px",
          backgroundColor:"red",
          position:"absolute",
-         top:top,
-         bottom:bottom,
-         left:left,
-         right:right
+         top:props.top,
+         left:props.left,
       }
    }
+
   return (
     <div style={style.character}>
+      O      O
+      ----
     </div>
   )
 }

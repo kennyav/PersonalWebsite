@@ -1,12 +1,13 @@
-import Header from "./components/Header";
+import React, { useState } from "react";
+
 import NavbarTailwind from "./components/Navbar";
-import Character from "./components/Character";
+import CharacterController from "./components/CharacterController";
 
 function App() {
   return (
     <>
       <NavbarTailwind />
-      <Character />
+      <CharacterController/>
     </>
   );
 }
